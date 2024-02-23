@@ -27,3 +27,10 @@ def fft(data, window=None):
     ys = np.fft.fft(data * window)
     xs = np.fft.fftfreq(len(data), 1.0 / config.MIC_RATE)
     return xs, ys
+
+
+  def add_plot(self, title):
+        new_plot = pg.PlotWidget()
+        self.layout.addWidget(new_plot)
+        self.plot.append(new_plot)
+        self.curve.append([])
